@@ -40,10 +40,17 @@ formBtn.addEventListener('click', (e) =>{
     var name = document.querySelector("#name").value;
     var address = document.querySelector("#address").value;
     var zipcode = document.querySelector("#zipcode").value;
+    if(name === '' && address === '' && zipcode === ''){
+        document.getElementById('textName').innerHTML= "Name: NaN";
+    document.getElementById('textAddress').innerHTML= "Address: NaN";
+    document.getElementById('textZipcode').innerHTML= "ZipCode: NaN";
+    }else{
     document.getElementById('textName').innerHTML= `Name:  ${name}`;
     document.getElementById('textAddress').innerHTML= `Address:  ${address}`;
     document.getElementById('textZipcode').innerHTML= `ZipCode:  ${zipcode}`;
+    }
     console.log(name, address,zipcode)
+
 })
 
 
